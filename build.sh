@@ -108,7 +108,7 @@ build_encoder() {
     # FFmpeg
     echo "Build FFmpeg"
 
-    git clone --depth 1 --branch lcevceil.2 https://github.com/rofferom/FFmpeg.git "$LINUX_WORKDIR/ffmpeg"
+    git clone --depth 1 --branch lcevceil.3 https://github.com/rofferom/FFmpeg.git "$LINUX_WORKDIR/ffmpeg"
     cd "$LINUX_WORKDIR/ffmpeg"
 
     ./configure --prefix=$LINUX_ROOTFS \
