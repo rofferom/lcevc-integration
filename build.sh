@@ -171,7 +171,7 @@ build_decoder() {
     # lcevcdec
     echo "Build lcevcdec"
 
-    git clone --branch build-hack.0 https://github.com/rofferom/LCEVCdec.git "$LINUX_WORKDIR/LCEVCdec"
+    git clone https://github.com/v-novaltd/LCEVCdec.git --branch 3.3.3 "$LINUX_WORKDIR/LCEVCdec"
     cd "$LINUX_WORKDIR/LCEVCdec"
 
     mkdir build && cd build
@@ -183,6 +183,7 @@ build_decoder() {
         -DVN_SDK_SAMPLE_SOURCE=OFF \
         -DVN_SDK_UNIT_TESTS=OFF \
         -DVN_SDK_DOCS=OFF \
+        -DCMAKE_PREFIX_PATH="$LINUX_ROOTFS/lib/cmake" \
         -DCMAKE_INSTALL_PREFIX="$LINUX_ROOTFS" \
         ..
 
