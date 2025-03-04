@@ -193,8 +193,9 @@ build_decoder() {
     # FFmpeg
     echo "Build FFmpeg"
 
-    git clone --depth 1 --branch lcevc_generic.0 https://github.com/rofferom/FFmpeg.git "$LINUX_WORKDIR/ffmpeg"
+    git clone https://github.com/ffmpeg/FFmpeg.git "$LINUX_WORKDIR/ffmpeg"
     cd "$LINUX_WORKDIR/ffmpeg"
+    git checkout f76195ff656d6bea68feee783160652e2b3e3d60
 
     ./configure --prefix=$LINUX_ROOTFS \
         --enable-shared \
