@@ -209,9 +209,9 @@ build_decoder() {
     make install
 }
 
-export PKG_CONFIG_PATH="$WIN32_ROOTFS/lib/pkgconfig"
-build_encoder
-unset PKG_CONFIG_PATH
+#export PKG_CONFIG_PATH="$WIN32_ROOTFS/lib/pkgconfig"
+#build_encoder
+#unset PKG_CONFIG_PATH
 
 export PKG_CONFIG_PATH="$LINUX_ROOTFS/lib/pkgconfig"
 export LD_LIBRARY_PATH="$LINUX_ROOTFS/lib"
